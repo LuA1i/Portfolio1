@@ -1,0 +1,468 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(20, 20, 20);
+  color: white;
+  font-family: 'Space Grotesk', sans-serif;
+  overflow-x: hidden;
+  height: 100vh;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Section About me */
+hr {
+  border: 1px solid rgb(65, 63, 63);
+}
+
+.hidden {
+  opacity: 0;
+  transition: all 3s ease;
+}
+.show {
+  opacity: 1;
+}
+.rings_img {
+  position: relative;
+  top: 160px;
+  right: 400px;
+}
+.div_padding {
+  padding: 1% 7%;
+}
+
+/* .about_text {
+  height: 500px;
+} */
+
+#about_me {
+  padding-top: 0;
+  padding-bottom: 150px;
+}
+
+.about_text {
+  position: relative;
+  top: 0px;
+  font-family: 'Poppins', sans-serif;
+}
+.about_text h1 {
+  position: relative;
+  font-size: 60px;
+  width: 600px;
+  color: transparent;
+  -webkit-text-stroke: 0.4px rgb(116, 113, 113);
+  text-transform: uppercase;
+}
+
+.about_text h1::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 50%;
+  color: lightgreen;
+  -webkit-text-stroke: 0px rgb(116, 113, 113);
+  border-right: 2px solid lightgreen;
+  overflow: hidden;
+  animation: animate 6s linear infinite;
+}
+
+@keyframes animate {
+  0%,
+  10%,
+  100% {
+    width: 0;
+  }
+  70%,
+  90% {
+    width: 100%;
+  }
+}
+
+.home_link {
+  color: white;
+  font-size: 20px;
+  outline: none;
+  border-bottom: none;
+  text-decoration: none;
+  font-weight: bolder;
+  padding-top: 16px;
+  transition: 0.8s ease;
+}
+
+.home_link:hover {
+  color: lightgreen;
+}
+.navigation {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  z-index: 100;
+}
+
+.navbar_icons {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  top: 22px;
+  gap: 20px;
+}
+
+.navbar_icons a {
+  color: white;
+  transition: 0.8s ease;
+}
+
+.navbar_icons a:hover {
+  color: lightgreen;
+}
+u {
+  border-bottom: 10px solid lightgreen; /* Add an underline with the desired color */
+  text-decoration: none; /* Remove the default underline */
+}
+
+.about_text p {
+  padding-top: 30px;
+  font-size: 25px;
+  position: relative;
+  width: 800px;
+}
+
+.about_text a {
+  position: relative;
+  top: 60px;
+  display: flex;
+  color: lightgreen;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 50%;
+  font-size: 19px;
+  transition: 0.3s ease;
+}
+.about_text a:hover {
+  color: white;
+}
+/* Expereicne Section */
+#experince_section {
+  padding-top: 50px;
+}
+.experiences {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  text-align: center;
+  padding-top: 110px;
+  padding-bottom: 100px;
+}
+
+/* Project Carsds */
+
+.projects_container {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 100px;
+  padding-top: 4%;
+  text-align: center;
+  word-spacing: 2px;
+}
+
+.img_one,
+.img_two {
+  max-width: 100%;
+}
+
+.img_one img,
+.img_two img {
+  height: 250px;
+  width: auto;
+}
+
+.img_one img:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+.img_two img:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+.img_container {
+  max-width: 50%;
+}
+.background_change {
+  position: relative;
+  background-color: rgb(53, 52, 52);
+  width: 100vw;
+  box-sizing: border-box;
+  overflow-wrap: hidden;
+  right: 10px;
+}
+
+.contact {
+  position: relative;
+  text-decoration: none;
+  color: white;
+  font-size: 19px;
+}
+
+.submit {
+  outline: none;
+  border: none;
+  background: none;
+  border-bottom: 2px solid lightgreen;
+  position: absolute;
+  left: 237px;
+  padding-top: 20px;
+  width: 117px;
+  cursor: pointer;
+  color: white;
+  font-size: 13px;
+}
+
+/* End Page */
+
+/* User input Section */
+
+#contact_me {
+  padding: 2% 7%;
+  background: rgb(39, 39, 39);
+  width: 100vw;
+}
+
+.user_form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+/* .entry_area {
+  position: relative;
+
+  line-height: 40px;
+}
+
+input {
+  position: relative;
+  width: 100%;
+  outline: none;
+  font-size: 15px;
+  padding: 0 30px;
+  line-height: 40px;
+  border-radius: 10px;
+  border: 1px solid #f0ffff;
+  background: transparent;
+  transition: 0.1s ease;
+  z-index: 1111;
+  color: white;
+}
+
+.lablline {
+  position: absolute;
+  font-size: 13px;
+  color: #f0ffff;
+  padding: 0 20px;
+  margin: 0 20px;
+  background: rgb(39, 39, 39);
+  transition: 0.2s ease;
+}
+.lablline_two {
+  position: absolute;
+  font-size: 13px;
+  color: #f0ffff;
+  padding: 0 20px;
+  margin: 0 20px;
+  background: rgb(39, 39, 39);
+  transition: 0.2s ease;
+}
+input:focus,
+input:valid {
+  color: lightgreen;
+  border: 2px solid lightgreen;
+}
+input:focus + .lablline,
+input:valid + .lablline {
+  color: lightgreen;
+  height: 30px;
+  line-height: 30px;
+  transform: translate(-14px, -14px) scale(0.88);
+  z-index: 1111;
+} */
+label {
+  font-size: 15px;
+}
+.user_form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.user_form input {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgb(94, 92, 92);
+  outline: none;
+  color: white;
+  transition: border-color 0.5s;
+}
+
+.user_form input:focus {
+  border-bottom: 1px solid lightgreen;
+}
+
+.none-resize {
+  resize: none;
+  width: 200px;
+  height: 90px;
+  background: transparent;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid rgb(94, 92, 92);
+  color: white;
+}
+.none-resize:focus {
+  border-bottom: 1px solid lightgreen;
+}
+.contact_container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contact_container p {
+  width: 50%;
+}
+.submit_btn {
+  display: inline-block;
+  height: 30px;
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid rgb(94, 92, 92);
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Add a transition for smooth animation */
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 420;
+}
+
+.submit_btn:hover {
+  background-color: lightgreen; /* Change the background color on hover */
+  color: black;
+}
+
+/* Copy right section */
+
+hr {
+  margin-top: 4%;
+}
+
+.end_page {
+  padding-top: 3%;
+  display: flex;
+  justify-content: space-between;
+}
+.end_page_icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 20px;
+}
+.end_page_icons a {
+  color: white;
+  transition: 0.8s ease;
+}
+
+.end_page_icons a:hover {
+  color: lightgreen;
+}
+/* Mobile Support */
+
+@media (max-width: 768px) {
+  #about_me {
+    padding-bottom: 30%;
+  }
+  .about_text {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    top: 15px;
+  }
+  .about_text h1 {
+    font-size: 50px;
+  }
+  .about_text p {
+    width: 70%;
+    font-size: 16px;
+  }
+  .about_text a {
+    position: relative;
+    display: flex;
+    align-self: center;
+    text-align: center;
+    left: 84px;
+  }
+
+  .experiences {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+  }
+
+  .cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .cards_left {
+    padding: 0;
+  }
+  .card_right {
+    padding: 0;
+  }
+
+  .about_text h1::before {
+    animation: none;
+  }
+  .about_text h1 {
+    content: attr(data-text);
+    color: lightgreen;
+  }
+  .about_text u {
+    color: transparent;
+  }
+
+  .projects_container {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    gap: 50px;
+    right: 100px;
+  }
+}
