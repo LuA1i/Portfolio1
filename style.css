@@ -189,6 +189,7 @@ u {
 .img_two img {
   height: 250px;
   width: auto;
+  border-radius: 10px;
 }
 
 .img_one img:hover {
